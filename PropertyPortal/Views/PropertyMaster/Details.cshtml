@@ -1,0 +1,190 @@
+﻿@model PropertyPortal.tblpropertymain
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>tblpropertymain</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ReqType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ReqType)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PTypeId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PTypeId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PCategoryId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PCategoryId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PTransactionType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PTransactionType)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.POwnershipType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.POwnershipType)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ConstructionAge)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ConstructionAge)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PFurnish)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PFurnish)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Range)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Range)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TaxNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TaxNo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Reg_Date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Reg_Date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Address)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.City)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.State)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.State)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Pincode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Pincode)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BHK)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BHK)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TotalFloor)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TotalFloor)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Facing)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Facing)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BathRoom)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BathRoom)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CoveredArea)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CoveredArea)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.RateSq)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RateSq)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Features)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Features)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PostingDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PostingDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BStatus)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BStatus)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Status)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Status)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

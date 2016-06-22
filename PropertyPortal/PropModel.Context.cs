@@ -34,5 +34,9 @@ namespace PropertyPortal
         public DbSet<tbltrantypemaster> tbltrantypemasters { get; set; }
         public DbSet<tblportaluser> tblportalusers { get; set; }
         public DbSet<tblpropagent> tblpropagents { get; set; }
+        public DbSet<tblpropertyammenity> tblpropertyammenities { get; set; }
+        public DbSet<tblpropertyimage> tblpropertyimages { get; set; }
+        public DbSet<tblpropertymain> tblpropertymains { get; set; }
+        public DbSet<tblpropertyfloorplan> tblpropertyfloorplans { get; set; }
     }
 }

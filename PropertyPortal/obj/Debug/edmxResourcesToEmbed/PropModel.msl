@@ -117,5 +117,75 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tblpropertyammenities">
+      <EntityTypeMapping TypeName="propertyportalModel.tblpropertyammenity">
+        <MappingFragment StoreEntitySet="tblpropertyammenities">
+          <ScalarProperty Name="Bedding" ColumnName="Bedding" />
+          <ScalarProperty Name="StorageSpace" ColumnName="StorageSpace" />
+          <ScalarProperty Name="PartyRoom" ColumnName="PartyRoom" />
+          <ScalarProperty Name="PlayingCourt" ColumnName="PlayingCourt" />
+          <ScalarProperty Name="GYM" ColumnName="GYM" />
+          <ScalarProperty Name="PlayGround" ColumnName="PlayGround" />
+          <ScalarProperty Name="LiftService" ColumnName="LiftService" />
+          <ScalarProperty Name="PowerBackup" ColumnName="PowerBackup" />
+          <ScalarProperty Name="PropertyId" ColumnName="PropertyId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblpropertyimages">
+      <EntityTypeMapping TypeName="propertyportalModel.tblpropertyimage">
+        <MappingFragment StoreEntitySet="tblpropertyimages">
+          <ScalarProperty Name="UploadedOn" ColumnName="UploadedOn" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="PropertyId" ColumnName="PropertyId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblpropertymains">
+      <EntityTypeMapping TypeName="propertyportalModel.tblpropertymain">
+        <MappingFragment StoreEntitySet="tblpropertymain">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="BStatus" ColumnName="BStatus" />
+          <ScalarProperty Name="PostingDate" ColumnName="PostingDate" />
+          <ScalarProperty Name="Features" ColumnName="Features" />
+          <ScalarProperty Name="RateSq" ColumnName="RateSq" />
+          <ScalarProperty Name="CoveredArea" ColumnName="CoveredArea" />
+          <ScalarProperty Name="BathRoom" ColumnName="BathRoom" />
+          <ScalarProperty Name="Facing" ColumnName="Facing" />
+          <ScalarProperty Name="TotalFloor" ColumnName="TotalFloor" />
+          <ScalarProperty Name="BHK" ColumnName="BHK" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Reg_Date" ColumnName="Reg_Date" />
+          <ScalarProperty Name="TaxNo" ColumnName="TaxNo" />
+          <ScalarProperty Name="Range" ColumnName="Range" />
+          <ScalarProperty Name="PFurnish" ColumnName="PFurnish" />
+          <ScalarProperty Name="ConstructionAge" ColumnName="ConstructionAge" />
+          <ScalarProperty Name="POwnershipType" ColumnName="POwnershipType" />
+          <ScalarProperty Name="PTransactionType" ColumnName="PTransactionType" />
+          <ScalarProperty Name="PCategoryId" ColumnName="PCategoryId" />
+          <ScalarProperty Name="PTypeId" ColumnName="PTypeId" />
+          <ScalarProperty Name="ReqType" ColumnName="ReqType" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblpropertyfloorplans">
+      <EntityTypeMapping TypeName="propertyportalModel.tblpropertyfloorplan">
+        <MappingFragment StoreEntitySet="tblpropertyfloorplan">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DocumentName" ColumnName="DocumentName" />
+          <ScalarProperty Name="DocumentURL" ColumnName="DocumentURL" />
+          <ScalarProperty Name="PropertyId" ColumnName="PropertyId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

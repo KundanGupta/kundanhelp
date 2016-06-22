@@ -1,0 +1,281 @@
+﻿@model PropertyPortal.tblpropertymain
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="container-fluid">
+        <section class="container">
+            <div class="container-page">
+                <div class="col-md-6">
+                    <table class="table table-bordered">
+                        <tr class="active">
+                            <th colspan="2">Edit Furnish Master</th>
+                        </tr>
+                        <tr>
+                            <td>
+
+                                @Html.HiddenFor(model => model.ID)
+                                @Html.HiddenFor(model => model.UserId)
+                                @Html.LabelFor(model => model.ReqType)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.ReqType)
+                                @Html.ValidationMessageFor(model => model.ReqType)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.PTypeId)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.PTypeId)
+                                @Html.ValidationMessageFor(model => model.PTypeId)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.PCategoryId)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.PCategoryId)
+                                @Html.ValidationMessageFor(model => model.PCategoryId)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.PTransactionType)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.PTransactionType)
+                                @Html.ValidationMessageFor(model => model.PTransactionType)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.POwnershipType)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.POwnershipType)
+                                @Html.ValidationMessageFor(model => model.POwnershipType)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.ConstructionAge)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.ConstructionAge)
+                                @Html.ValidationMessageFor(model => model.ConstructionAge)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.PFurnish)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.PFurnish)
+                                @Html.ValidationMessageFor(model => model.PFurnish)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.Range)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.Range)
+                                @Html.ValidationMessageFor(model => model.Range)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.TaxNo)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.TaxNo)
+                                @Html.ValidationMessageFor(model => model.TaxNo)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.Reg_Date)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.Reg_Date)
+                                @Html.ValidationMessageFor(model => model.Reg_Date)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.Address)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.Address)
+                                @Html.ValidationMessageFor(model => model.Address)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.City)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.City)
+                                @Html.ValidationMessageFor(model => model.City)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.State)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.State)
+                                @Html.ValidationMessageFor(model => model.State)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.Pincode)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.Pincode)
+                                @Html.ValidationMessageFor(model => model.Pincode)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.BHK)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.BHK)
+                                @Html.ValidationMessageFor(model => model.BHK)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.TotalFloor)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.TotalFloor)
+                                @Html.ValidationMessageFor(model => model.TotalFloor)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.Facing)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.Facing)
+                                @Html.ValidationMessageFor(model => model.Facing)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.BathRoom)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.BathRoom)
+                                @Html.ValidationMessageFor(model => model.BathRoom)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.CoveredArea)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.CoveredArea)
+                                @Html.ValidationMessageFor(model => model.CoveredArea)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.RateSq)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.RateSq)
+                                @Html.ValidationMessageFor(model => model.RateSq)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.Features)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.Features)
+                                @Html.ValidationMessageFor(model => model.Features)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.PostingDate)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.PostingDate)
+                                @Html.ValidationMessageFor(model => model.PostingDate)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.BStatus)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.BStatus)
+                                @Html.ValidationMessageFor(model => model.BStatus)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.Status)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.Status)
+                                @Html.ValidationMessageFor(model => model.Status)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" value="Update" class="button btn btn-primary" /> @Html.ActionLink("Back to List", "Index")
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+        </section>
+    </div>
+
+}
+
+
+
+@section Scripts {
+    @System.Web.Optimization.Scripts.Render("~/bundles/jqueryval")
+}

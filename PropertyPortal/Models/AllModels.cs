@@ -14,4 +14,34 @@ namespace PropertyPortal.Models
         public string IsParent { get; set; }
         public string HasChild { get; set; }
     }
+
+    public class OwnershipTypeModel
+    {
+        public long Id { get; set; }
+        public string OwnershipType { get; set; }
+    }
+
+    public class PropertyCategoryModel
+    {
+        public long Id { get; set; }
+        public string CategoryName { get; set; }
+    }
+
+    public class FurnishMasterModel
+    {
+        public long Id { get; set; }
+        public string Name { get; set; }
+    }
+
+    public class PropertyTypeModel
+    {
+        public long Id { get; set; }
+        public string PropertyType { get; set; }
+    }
+
+    public class TransactionTypeMaster
+    {
+        public long Id { get; set; }
+        public string Name { get; set; }
+    }
 }

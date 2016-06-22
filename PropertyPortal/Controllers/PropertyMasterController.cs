@@ -8,33 +8,33 @@ using System.Web.Mvc;
 
 namespace PropertyPortal.Controllers
 {
-    public class TransactionTypeController : Controller
+    public class PropertyMasterController : Controller
     {
         private propertyportalEntities db = new propertyportalEntities();
 
         //
-        // GET: /TransactionType/
+        // GET: /PropertyMaster/
 
         public ActionResult Index()
         {
-            return View(db.tbltrantypemasters.ToList());
+            return View(db.tblpropertymains.ToList());
         }
 
         //
-        // GET: /TransactionType/Details/5
+        // GET: /PropertyMaster/Details/5
 
         public ActionResult Details(long id = 0)
         {
-            tbltrantypemaster tbltrantypemaster = db.tbltrantypemasters.Find(id);
-            if (tbltrantypemaster == null)
+            tblpropertymain tblpropertymain = db.tblpropertymains.Find(id);
+            if (tblpropertymain == null)
             {
                 return HttpNotFound();
             }
-            return View(tbltrantypemaster);
+            return View(tblpropertymain);
         }
 
         //
-        // GET: /TransactionType/Create
+        // GET: /PropertyMaster/Create
 
         public ActionResult Create()
         {
@@ -42,73 +42,73 @@ namespace PropertyPortal.Controllers
         }
 
         //
-        // POST: /TransactionType/Create
+        // POST: /PropertyMaster/Create
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(tbltrantypemaster tbltrantypemaster)
+        public ActionResult Create(tblpropertymain tblpropertymain)
         {
             if (ModelState.IsValid)
             {
-                db.tbltrantypemasters.Add(tbltrantypemaster);
+                db.tblpropertymains.Add(tblpropertymain);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(tbltrantypemaster);
+            return View(tblpropertymain);
         }
 
         //
-        // GET: /TransactionType/Edit/5
+        // GET: /PropertyMaster/Edit/5
 
         public ActionResult Edit(long id = 0)
         {
-            tbltrantypemaster tbltrantypemaster = db.tbltrantypemasters.Find(id);
-            if (tbltrantypemaster == null)
+            tblpropertymain tblpropertymain = db.tblpropertymains.Find(id);
+            if (tblpropertymain == null)
             {
                 return HttpNotFound();
             }
-            return View(tbltrantypemaster);
+            return View(tblpropertymain);
         }
 
         //
-        // POST: /TransactionType/Edit/5
+        // POST: /PropertyMaster/Edit/5
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(tbltrantypemaster tbltrantypemaster)
+        public ActionResult Edit(tblpropertymain tblpropertymain)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(tbltrantypemaster).State = EntityState.Modified;
+                db.Entry(tblpropertymain).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(tbltrantypemaster);
+            return View(tblpropertymain);
         }
 
         //
-        // GET: /TransactionType/Delete/5
+        // GET: /PropertyMaster/Delete/5
 
         public ActionResult Delete(long id = 0)
         {
-            tbltrantypemaster tbltrantypemaster = db.tbltrantypemasters.Find(id);
-            if (tbltrantypemaster == null)
+            tblpropertymain tblpropertymain = db.tblpropertymains.Find(id);
+            if (tblpropertymain == null)
             {
                 return HttpNotFound();
             }
-            return View(tbltrantypemaster);
+            return View(tblpropertymain);
         }
 
         //
-        // POST: /TransactionType/Delete/5
+        // POST: /PropertyMaster/Delete/5
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(long id)
         {
-            tbltrantypemaster tbltrantypemaster = db.tbltrantypemasters.Find(id);
-            db.tbltrantypemasters.Remove(tbltrantypemaster);
+            tblpropertymain tblpropertymain = db.tblpropertymains.Find(id);
+            db.tblpropertymains.Remove(tblpropertymain);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

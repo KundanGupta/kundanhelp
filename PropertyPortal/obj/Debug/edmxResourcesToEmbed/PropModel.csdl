@@ -10,6 +10,10 @@
     <EntitySet Name="tbltrantypemasters" EntityType="propertyportalModel.tbltrantypemaster" />
     <EntitySet Name="tblportalusers" EntityType="propertyportalModel.tblportaluser" />
     <EntitySet Name="tblpropagents" EntityType="propertyportalModel.tblpropagent" />
+    <EntitySet Name="tblpropertyammenities" EntityType="propertyportalModel.tblpropertyammenity" />
+    <EntitySet Name="tblpropertyimages" EntityType="propertyportalModel.tblpropertyimage" />
+    <EntitySet Name="tblpropertymains" EntityType="propertyportalModel.tblpropertymain" />
+    <EntitySet Name="tblpropertyfloorplans" EntityType="propertyportalModel.tblpropertyfloorplan" />
   </EntityContainer>
   <EntityType Name="tbladminlogin">
     <Key>
@@ -117,5 +121,71 @@
     <Property Type="String" Name="LastModifiedBy" MaxLength="45" FixedLength="false" Unicode="false" />
     <Property Type="DateTime" Name="LastModifiedDate" Precision="0" />
     <Property Type="String" Name="ProfilePic" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblpropertyammenity">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PropertyId" Type="Int64" Nullable="false" />
+    <Property Name="PowerBackup" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="LiftService" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PlayGround" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="GYM" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PlayingCourt" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PartyRoom" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="StorageSpace" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Bedding" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblpropertyimage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PropertyId" Type="Int64" Nullable="false" />
+    <Property Name="ImageUrl" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IsApproved" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="UploadedOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="tblpropertymain">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int64" Nullable="false" />
+    <Property Name="ReqType" Type="Int64" Nullable="false" />
+    <Property Name="PTypeId" Type="Int64" Nullable="false" />
+    <Property Name="PCategoryId" Type="Int64" Nullable="false" />
+    <Property Name="PTransactionType" Type="Int64" Nullable="false" />
+    <Property Name="POwnershipType" Type="Int64" Nullable="false" />
+    <Property Name="ConstructionAge" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="PFurnish" Type="Int64" Nullable="false" />
+    <Property Name="Range" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="TaxNo" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Reg_Date" Type="DateTime" Nullable="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Pincode" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BHK" Type="Int64" />
+    <Property Name="TotalFloor" Type="Int64" />
+    <Property Name="Facing" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="BathRoom" Type="Int64" />
+    <Property Name="CoveredArea" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="RateSq" Type="Decimal" />
+    <Property Name="Features" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="PostingDate" Type="DateTime" />
+    <Property Name="BStatus" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblpropertyfloorplan">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PropertyId" Type="Int64" Nullable="false" />
+    <Property Name="DocumentURL" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

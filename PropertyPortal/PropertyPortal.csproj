@@ -135,6 +135,7 @@
     <Compile Include="Controllers\MenuMasterController.cs" />
     <Compile Include="Controllers\OwnershipMasterController.cs" />
     <Compile Include="Controllers\PropertyCategoryController.cs" />
+    <Compile Include="Controllers\PropertyMasterController.cs" />
     <Compile Include="Controllers\PropertyTypeController.cs" />
     <Compile Include="Controllers\TransactionTypeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -143,6 +144,7 @@
     <Compile Include="Models\AllModels.cs" />
     <Compile Include="Models\CustomAuthorizeAttribute.cs" />
     <Compile Include="Models\CustomPrincipal.cs" />
+    <Compile Include="Models\MasterDataDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -177,7 +179,19 @@
     <Compile Include="tblpropagent.cs">
       <DependentUpon>PropModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="tblpropertyammenity.cs">
+      <DependentUpon>PropModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="tblpropertycategory.cs">
+      <DependentUpon>PropModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblpropertyfloorplan.cs">
+      <DependentUpon>PropModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblpropertyimage.cs">
+      <DependentUpon>PropModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblpropertymain.cs">
       <DependentUpon>PropModel.tt</DependentUpon>
     </Compile>
     <Compile Include="tblpropertytype.cs">
@@ -321,12 +335,17 @@
     <Content Include="Views\PropertyType\Create.cshtml" />
     <Content Include="Views\PropertyType\Edit.cshtml" />
     <Content Include="Views\PropertyType\Delete.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\PropertyMaster\Index.cshtml" />
+    <Content Include="Views\PropertyMaster\Details.cshtml" />
+    <Content Include="Views\PropertyMaster\Create.cshtml" />
+    <Content Include="Views\PropertyMaster\Edit.cshtml" />
+    <Content Include="Views\PropertyMaster\Delete.cshtml" />
     <Content Include="Views\TransactionType\Index.cshtml" />
     <Content Include="Views\TransactionType\Details.cshtml" />
     <Content Include="Views\TransactionType\Create.cshtml" />
     <Content Include="Views\TransactionType\Edit.cshtml" />
     <Content Include="Views\TransactionType\Delete.cshtml" />
-    <Content Include="Views\Admin\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

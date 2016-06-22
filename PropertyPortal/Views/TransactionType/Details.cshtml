@@ -6,29 +6,17 @@
 
 <h2>Details</h2>
 
-<div class="container-fluid">
-    <section class="container">
-        <div class="container-page">
-            <div class="col-md-6">
-                <table class="table table-bordered">
-                    <tr class="active">
-                        <th colspan="2">Transaction Type
-                        </th>
-                    </tr>
-                    <tr>
-                        <td>
-                            @Html.DisplayNameFor(model => model.Name)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(model => model.Name)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">@Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |   @Html.ActionLink("Back to List", "Index")
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </section>
-</div>
+<fieldset>
+    <legend>tbltrantypemaster</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

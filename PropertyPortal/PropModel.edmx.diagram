@@ -14,6 +14,10 @@
         <EntityTypeShape EntityType="propertyportalModel.tbltrantypemaster" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="propertyportalModel.tblportaluser" Width="1.5" PointX="3.5512326003756529" PointY="17.067409329613394" />
         <EntityTypeShape EntityType="propertyportalModel.tblpropagent" Width="1.5" PointX="9.4295205629568173" PointY="26.782541928245937" />
+        <EntityTypeShape EntityType="propertyportalModel.tblpropertyammenity" Width="1.5" PointX="3.75" PointY="6.75" />
+        <EntityTypeShape EntityType="propertyportalModel.tblpropertyimage" Width="1.5" PointX="5.75" PointY="6.75" />
+        <EntityTypeShape EntityType="propertyportalModel.tblpropertymain" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="propertyportalModel.tblpropertyfloorplan" Width="1.5" PointX="7.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
