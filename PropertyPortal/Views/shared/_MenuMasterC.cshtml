@@ -1,0 +1,6 @@
+﻿@model IEnumerable<PropertyPortal.Models.MasterMenuClass>
+
+@foreach (var cc in Model)
+{
+     <li><a href="@cc.MenuLink">@cc.MenuName</a></li>
+}

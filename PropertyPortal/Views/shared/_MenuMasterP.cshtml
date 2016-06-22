@@ -1,0 +1,31 @@
+﻿@model IEnumerable<PropertyPortal.Models.MasterMenuClass>
+
+@if (Model != null)
+{
+
+    foreach (var cc in Model)
+    {
+        if (cc.HasChild != "Y")
+        {
+        <li class="active"><a href="@cc.MenuLink" class="">@cc.MenuName</a></li>
+        }
+        else
+        {
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@cc.MenuName <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                @try
+                { 
+                    @Html.Action("ChildMenu", "Master", new { id = @cc.Id })
+                }
+                finally
+                {
+
+                }
+            </ul>
+        </li>
+        }
+    }
+}
+
+

@@ -1,0 +1,50 @@
+﻿@model PropertyPortal.tbltrantypemaster
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+   <div class="container-fluid">
+        <section class="container">
+            <div class="container-page">
+                <div class="col-md-6">
+                    <table class="table table-bordered">
+                        <tr class="active">
+                            <th colspan="2">Edit Transaction Type</th>
+                        </tr>
+                        <tr>
+                            <td>
+
+                                @Html.HiddenFor(model => model.ID)
+
+                                @Html.LabelFor(model => model.Name)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.Name)
+                                @Html.ValidationMessageFor(model => model.Name)
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" value="Update" class="button btn btn-primary" />
+                                @Html.ActionLink("Back to List", "Index")
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+}
+
+
+@section Scripts {
+    @System.Web.Optimization.Scripts.Render("~/bundles/jqueryval")
+}

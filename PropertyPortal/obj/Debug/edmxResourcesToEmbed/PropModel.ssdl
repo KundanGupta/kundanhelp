@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="propertyportalModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="propertyportalModelStoreContainer">
+    <EntitySet Name="tbladminlogin" EntityType="propertyportalModel.Store.tbladminlogin" store:Type="Tables" Schema="propertyportal" />
+    <EntitySet Name="tblfurnishmaster" EntityType="propertyportalModel.Store.tblfurnishmaster" store:Type="Tables" Schema="propertyportal" />
+    <EntitySet Name="tblmenu" EntityType="propertyportalModel.Store.tblmenu" store:Type="Tables" Schema="propertyportal" />
+    <EntitySet Name="tblownershiptypemaster" EntityType="propertyportalModel.Store.tblownershiptypemaster" store:Type="Tables" Schema="propertyportal" />
+    <EntitySet Name="tblportalusers" EntityType="propertyportalModel.Store.tblportalusers" store:Type="Tables" Schema="propertyportal" />
+    <EntitySet Name="tblpropagents" EntityType="propertyportalModel.Store.tblpropagents" store:Type="Tables" Schema="propertyportal" />
+    <EntitySet Name="tblpropertycategory" EntityType="propertyportalModel.Store.tblpropertycategory" store:Type="Tables" Schema="propertyportal" />
+    <EntitySet Name="tblpropertytype" EntityType="propertyportalModel.Store.tblpropertytype" store:Type="Tables" Schema="propertyportal" />
+    <EntitySet Name="tbltrantypemaster" EntityType="propertyportalModel.Store.tbltrantypemaster" store:Type="Tables" Schema="propertyportal" />
+  </EntityContainer>
+  <EntityType Name="tbladminlogin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsActive" Type="varchar" Nullable="false" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="tblfurnishmaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tblmenu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MenuName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="MenuLink" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="MenuOrder" Type="uint" Nullable="false" />
+    <Property Name="IsParent" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="ParentID" Type="uint" Nullable="false" />
+    <Property Name="HasChild" Type="varchar" Nullable="false" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="tblownershiptypemaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OwnershipType" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tblportalusers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="LastName" Type="varchar" MaxLength="45" />
+    <Property Name="Occupation" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="Gender" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="Address" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="State" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="City" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="Pincode" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="Mobile" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="MobileVerified" Type="varchar" MaxLength="1" />
+    <Property Name="EmailVerified" Type="varchar" MaxLength="1" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="varchar" MaxLength="45" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="ProfilePic" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tblpropagents">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="LastName" Type="varchar" MaxLength="45" />
+    <Property Name="Occupation" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="Gender" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="Address" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="State" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="City" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="Pincode" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="Mobile" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="MobileVerified" Type="varchar" MaxLength="1" />
+    <Property Name="EmailVerified" Type="varchar" MaxLength="1" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="45" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="varchar" MaxLength="45" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="ProfilePic" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tblpropertycategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tblpropertytype">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PropertyType" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tbltrantypemaster">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+</Schema>

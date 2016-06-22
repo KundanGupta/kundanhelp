@@ -1,0 +1,88 @@
+﻿@model PropertyPortal.tblmenu
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <div class="container-fluid">
+        <section class="container">
+            <div class="container-page">
+                <div class="col-md-6">
+                    <table class="table table-bordered">
+                        <tr class="active">
+                            <th colspan="2">Edit Menu</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                @Html.HiddenFor(model => model.ID)
+
+
+                                @Html.LabelFor(model => model.MenuName)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.MenuName)
+                                @Html.ValidationMessageFor(model => model.MenuName)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.MenuLink)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.MenuLink)
+                                @Html.ValidationMessageFor(model => model.MenuLink)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.MenuOrder)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.MenuOrder)
+                                @Html.ValidationMessageFor(model => model.MenuOrder)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.IsParent)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.IsParent)
+                                @Html.ValidationMessageFor(model => model.IsParent)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                @Html.LabelFor(model => model.ParentID)
+                            </td>
+                            <td>
+                                @Html.EditorFor(model => model.ParentID)
+                                @Html.ValidationMessageFor(model => model.ParentID)
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" value="Update" class="button btn btn-primary" />@Html.ActionLink("Back to List", "Index")
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+}
+
+@section Scripts {
+    @System.Web.Optimization.Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,197 @@
+﻿@model PropertyPortal.tblportaluser
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div class="container-fluid">
+    <section class="container">
+        <div class="container-page">
+            <div class="col-md-6">
+
+
+                <table class="table table-bordered">
+                    <tr class="active">
+                        <th colspan="2">User Details
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.UserName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.UserName)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Password)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Password)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.FirstName)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.LastName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.LastName)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Occupation)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Occupation)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Gender)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Gender)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Address)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Address)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.State)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.State)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.City)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.City)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Pincode)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Pincode)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Mobile)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Mobile)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Email)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.MobileVerified)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.MobileVerified)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.EmailVerified)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.EmailVerified)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.CreatedBy)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.CreatedBy)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.CreatedDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.CreatedDate)
+                        </td>
+
+                        <td>
+                            @Html.DisplayNameFor(model => model.LastModifiedBy)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.LastModifiedBy)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.LastModifiedDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.LastModifiedDate)
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            @Html.DisplayNameFor(model => model.ProfilePic)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.ProfilePic)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |     @Html.ActionLink("Back to List", "Index")
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>

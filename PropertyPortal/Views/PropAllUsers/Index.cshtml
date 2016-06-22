@@ -1,0 +1,44 @@
+﻿@model IEnumerable<PropertyPortal.tblportaluser>
+@using GridMvc.Html
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<div class="container">
+    <div class="row">
+         
+        <div class="col-xs-12">
+
+            <div class="panel panel-default panel-table">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col col-xs-6">
+                            <h3 class="panel-title">User Profile</h3>
+                        </div>
+                        <div class="col col-xs-6 text-right">
+                            @Html.ActionLink("Create New", "Create")
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    @Html.Grid(Model).Columns(columns =>
+           {
+                 columns.Add().Encoded(false).Sanitized(false).SetWidth(30).RenderValueAs(d => @<b> @Html.ActionLink("Edit", "Edit", new { id = d.ID })      </b>);
+                 columns.Add().Encoded(false).Sanitized(false).SetWidth(30).RenderValueAs(d => @<b> @Html.ActionLink("Details", "Details", new { id = d.ID })      </b>);
+                 columns.Add(foo => foo.UserName).Titled("User Name").SetWidth(200);
+                 columns.Add(foo => foo.FirstName).Titled("First Name");
+                 columns.Add(foo => foo.LastName).Titled("Last Name");
+                 columns.Add(foo => foo.Mobile).Titled("Mobile");
+                 columns.Add(foo => foo.Email).Titled("Email");
+           }).WithPaging(20)
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
